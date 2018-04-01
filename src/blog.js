@@ -18,10 +18,14 @@ const renderPage = () => {
         anchor.classList.add("active");
         let blogTitle = document.querySelector("#blog-title");
         let blogContent = document.querySelector("#blog-content");
+        let editPost = document.querySelector("#edit-post");
+        let deletePost = document.querySelector("#delete-post");
 
         // add first post title and content to view title and content
         blogTitle.textContent = post.title;
         blogContent.textContent = post.content;
+        editPost.href = `#/posts/${post.id}/edit`;
+        deletePost.href = `#/posts/${post.id}`;
       }
 
       listGroup.appendChild(anchor);
@@ -52,11 +56,14 @@ document.querySelector("#sidebar").addEventListener("click", (event) => {
   .then(result => {
     let blogTitle = document.querySelector("#blog-title");
     let blogContent = document.querySelector("#blog-content");
+    let editPost = document.querySelector("#edit-post");
+    let deletePost = document.querySelector("#delete-post");
 
     // add first post title and content to view title and content
     blogTitle.textContent = result.data.result.title;
     blogContent.textContent = result.data.result.content;
-
+    editPost.href = `#/posts/${result.data.result.id}/edit`;
+    deletePost.href = `#/posts/${result.data.result.id}`;
   })
   .catch(error => {
     console.log(error.response.data.error);

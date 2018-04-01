@@ -30,16 +30,28 @@
         </div>
         <div id="view" class="col-8">
 
-          <form id="post-form" action="#/posts/">
+          <form id="post-form">
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" value="">
+              <input type="text" class="form-control" id="post-title" value="">
             </div>
             <div class="form-group">
               <label for="title">Content</label>
-              <textarea type="text" rows="6" class="form-control" id="content"></textarea>
+              <textarea type="text" rows="6" class="form-control" id="post-content"></textarea>
             </div>
-            <button type="submit" class="btn btn-info btn-large">Create New Post</button>
+            <button id="post-button" type="submit" class="btn btn-info btn-large">Create New Post</button>
+          </form>
+
+          <form id="update-form">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="update-title" value="">
+            </div>
+            <div class="form-group">
+              <label for="title">Content</label>
+              <textarea type="text" rows="6" class="form-control" id="update-content"></textarea>
+            </div>
+            <button id="update-button" type="submit" class="btn btn-info btn-large">Update Post</button>
           </form>
 
           <section id="blog" class="list-group-item">
@@ -51,10 +63,10 @@
             <aside class="my-4">
               <ul class="nav justify-content-end">
                 <li class="nav-item">
-                  <a class="nav-link" id="edit-post" href="#/posts/67/edit">Edit</a>
+                  <a class="nav-link" id="edit-post" href="">Edit</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-danger" id="delete-post" href="#">Delete</a>
+                  <a class="nav-link text-danger" id="delete-post" href="">Delete</a>
                 </li>
               </ul>
             </aside>
@@ -68,6 +80,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./src/blog.js" charset="utf-8"></script>
+    <script src="./src/edit.js" charset="utf-8"></script>
     <script src="./src/posts.js" charset="utf-8"></script>
   </body>
 </html>

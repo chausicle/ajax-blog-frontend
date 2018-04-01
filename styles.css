@@ -19,6 +19,6 @@ hr {
   padding-left: 0.5rem;
 }
 
-#post-form {
+#post-form, #update-form {
   display: none;
 }

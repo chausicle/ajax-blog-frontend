@@ -1,21 +1,22 @@
 document.querySelector("#create-post").addEventListener("click", (event) => {
   const blog = document.querySelector("#blog");
   const formView = document.querySelector("#post-form");
+  const updateView = document.querySelector("#update-form");
 
   // hide blog window and show the create a post form
   blog.style.display = "none";
+  updateView.style.display = "none";
   formView.style.display = "inline";
 });
 
-document.querySelector("button[type='submit']").addEventListener("click", (event) => {
-  console.log(event);
+document.querySelector("#post-button").addEventListener("click", (event) => {
   const formView = document.querySelector("#post-form");
-  const title = formView.querySelector("#title");
-  const content = formView.querySelector("#content");
+  const postTitle = formView.querySelector("#post-title");
+  const postContent = formView.querySelector("#post-content");
 
   axios.post(`/posts/new`, {
-    title: title.value,
-    content: content.value
+    title: postTitle.value,
+    content: postContent.value
   })
   .then(result => {
     let alert = document.querySelector(".alert");
