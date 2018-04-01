@@ -13,10 +13,7 @@ document.querySelector("button[type='submit']").addEventListener("click", (event
   const title = formView.querySelector("#title");
   const content = formView.querySelector("#content");
 
-console.log('title === ', title.value);
-console.log('content === ', content.value);
-
-  axios.post(`${baseURL}/posts/new`, {
+  axios.post(`/posts/new`, {
     title: title.value,
     content: content.value
   })
@@ -34,7 +31,7 @@ console.log('content === ', content.value);
     // error response
     let alert = document.querySelector(".alert");
     const response = error.response.data.error;
-    
+
     // apply error messages to alert text content
     alert.textContent = response.message;
     response.errors.forEach((error, index, array) => {
