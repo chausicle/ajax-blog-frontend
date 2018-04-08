@@ -47,7 +47,7 @@ document.querySelector("#update-button").addEventListener("click", (event) => {
     updateView.style.display = "none";
 
     // reload page to get new content to show
-    window.location.reload(true);
+    location.assign("index.html");
   })
   .catch(error => {
     // error response

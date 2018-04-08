@@ -24,13 +24,13 @@ const renderPage = () => {
           anchor.classList.add("active");
           let blogTitle = document.querySelector("#blog-title");
           let blogContent = document.querySelector("#blog-content");
-          let updateeditPost = document.querySelector("#edit-post");
+          let updatePost = document.querySelector("#edit-post");
           let deletePost = document.querySelector("#delete-post");
 
           // add first post title and content to view title and content
           blogTitle.textContent = post.title;
           blogContent.textContent = post.content;
-          updateeditPost.href = `#/posts/${post.id}`;
+          updatePost.href = `#/posts/${post.id}`;
           deletePost.href = `#/posts/${post.id}`;
         }
 
