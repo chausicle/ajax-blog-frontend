@@ -1,20 +1,20 @@
 document.querySelector("#create-post").addEventListener("click", (event) => {
   const blog = document.querySelector("#blog");
-  const formView = document.querySelector("#post-form");
+  const postView = document.querySelector("#post-form");
   const updateView = document.querySelector("#update-form");
 
   // hide blog window and show the create a post form
   blog.style.display = "none";
   updateView.style.display = "none";
-  formView.style.display = "inline";
+  postView.style.display = "inline";
 });
 
 document.querySelector("#post-button").addEventListener("click", (event) => {
-  const formView = document.querySelector("#post-form");
-  const postTitle = formView.querySelector("#post-title");
-  const postContent = formView.querySelector("#post-content");
+  const postView = document.querySelector("#post-form");
+  const postTitle = postView.querySelector("#post-title");
+  const postContent = postView.querySelector("#post-content");
 
-  axios.post(`/posts/new`, {
+  axios.post(`${baseURL}/posts`, {
     title: postTitle.value,
     content: postContent.value
   })
@@ -23,12 +23,13 @@ document.querySelector("#post-button").addEventListener("click", (event) => {
 
     // make the form and alert display none when a new post is successfully created
     alert.style.display = "none";
-    formView.style.display = "none";
+    postView.style.display = "none";
 
     // reload page to get new content to show
     window.location.reload(true);
   })
   .catch(error => {
+    console.log(error.response.data);
     // error response
     let alert = document.querySelector(".alert");
     const response = error.response.data.error;
