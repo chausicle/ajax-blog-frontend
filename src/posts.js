@@ -29,7 +29,6 @@ document.querySelector("#post-button").addEventListener("click", (event) => {
     location.assign("index.html");
   })
   .catch(error => {
-    console.log(error.response.data);
     // error response
     let alert = document.querySelector(".alert");
     const response = error.response.data.error;

@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000";
+const baseURL = "https://rocky-meadow-63932.herokuapp.com";
 
 document.addEventListener('DOMContentLoaded', () => {
   renderPage();
