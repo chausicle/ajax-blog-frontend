@@ -25,8 +25,6 @@ document.querySelector("#post-button").addEventListener("click", (event) => {
     alert.style.display = "none";
     postView.style.display = "none";
 
-    // reload page to get new content to show
-    location.assign("index.html");
   })
   .catch(error => {
     // error response
@@ -41,4 +39,7 @@ document.querySelector("#post-button").addEventListener("click", (event) => {
     })
     alert.style.display = "block";
   });
+  
+  // reload page to get new content to show
+  location.assign("index.html");
 });
