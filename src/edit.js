@@ -47,6 +47,7 @@ document.querySelector("#update-button").addEventListener("click", (event) => {
     updateView.style.display = "none";
 
     // reload page to get new content to show
+    window.location("index.html");
   })
   .catch(error => {
     // error response
@@ -61,6 +62,5 @@ document.querySelector("#update-button").addEventListener("click", (event) => {
     })
     alert.style.display = "block";
   });
-  
-  location.assign("index.html");
+
 });

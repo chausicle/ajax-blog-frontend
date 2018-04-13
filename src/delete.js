@@ -6,10 +6,10 @@ document.querySelector("#delete-post").addEventListener("click", (event) => {
   axios.delete(`${baseURL}/posts/${id}`)
   .then(result => {
     console.log(result);
+    window.location("index.html");
   })
   .catch(error => {
     console.log(error.response.data.error);
   })
-  
-  location.assign("index.html");
+
 })
