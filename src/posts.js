@@ -26,7 +26,7 @@ document.querySelector("#post-button").addEventListener("click", (event) => {
     postView.style.display = "none";
 
     // reload page to get new content to show
-    window.location("index.html");
+    location.assign("index.html");
   })
   .catch(error => {
     // error response
