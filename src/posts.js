@@ -1,9 +1,11 @@
 document.querySelector("#create-post").addEventListener("click", (event) => {
+  const alert = document.querySelector(".alert");
   const blog = document.querySelector("#blog");
   const postView = document.querySelector("#post-form");
   const updateView = document.querySelector("#update-form");
 
   // hide blog window and show the create a post form
+  alert.style.display = "none";
   blog.style.display = "none";
   updateView.style.display = "none";
   postView.style.display = "inline";
