@@ -1,7 +1,7 @@
 // document.addEventListener("DOMContentLoaded", () => {
 // });
 document.querySelector("#delete-post").addEventListener("click", (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   // find id from href in edit link
   let url = event.target.href.split("/posts/")
   let id = url[1];
