@@ -1,4 +1,5 @@
 document.querySelector("#edit-post").addEventListener("click", (event) => {
+  event.preventDefault();
   const blog = document.querySelector("#blog");
   const updateView = document.querySelector("#update-form");
 
@@ -26,6 +27,7 @@ document.querySelector("#edit-post").addEventListener("click", (event) => {
 })
 
 document.querySelector("#update-button").addEventListener("click", (event) => {
+  event.preventDefault();
   const updateView = document.querySelector("#update-form");
   const updateTitle = updateView.querySelector("#update-title");
   const updateContent = updateView.querySelector("#update-content");

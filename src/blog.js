@@ -42,6 +42,7 @@ const renderPage = () => {
 
 // This line will be replaced by adding the onclick handler when the sidebar links are generated, above
 const showPost = (event) => {
+  event.preventDefault();
   // remove active highlight on previous blog focus to newly active highlight blog on click
   document.querySelector("#sidebar").querySelector(".active").classList.remove("active");
 
