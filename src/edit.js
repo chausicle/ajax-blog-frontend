@@ -40,6 +40,8 @@ document.querySelector("#update-button").addEventListener("click", (event) => {
   let url = event.target.href.split("/posts/");
   let id = url[1].split("/edit")[0];
 
+  console.log(event.target);
+  console.log(url);
   // update existing post with new title and content
   axios.put(`${baseURL}/posts/${id}`, {
     title: updateTitle.value,

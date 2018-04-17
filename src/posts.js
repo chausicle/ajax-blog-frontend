@@ -12,7 +12,7 @@ document.querySelector("#create-post").addEventListener("click", (event) => {
 // document.addEventListener("DOMContentLoaded", () => {
 // });
 document.querySelector("#post-button").addEventListener("click", (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   const postView = document.querySelector("#post-form");
   const postTitle = postView.querySelector("#post-title");
   const postContent = postView.querySelector("#post-content");
