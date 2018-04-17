@@ -26,8 +26,6 @@ document.querySelector("#edit-post").addEventListener("click", (event) => {
   });
 })
 
-// document.addEventListener("DOMContentLoaded", () => {
-// });
 document.querySelector("#update-button").addEventListener("click", (event) => {
   event.preventDefault();
   const updateView = document.querySelector("#update-form");

@@ -9,8 +9,6 @@ document.querySelector("#create-post").addEventListener("click", (event) => {
   postView.style.display = "inline";
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-// });
 document.querySelector("#post-button").addEventListener("click", (event) => {
   event.preventDefault();
   const postView = document.querySelector("#post-form");
