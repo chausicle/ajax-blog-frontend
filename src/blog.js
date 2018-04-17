@@ -37,7 +37,7 @@ const renderPage = () => {
         listGroup.appendChild(anchor);
       })
     }
-  })
+  });
 };
 
 // This line will be replaced by adding the onclick handler when the sidebar links are generated, above
